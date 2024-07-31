@@ -54,6 +54,9 @@ gem 'devise'
 # Lint
 gem 'rubocop', require: false
 
+# Style
+gem 'tailwindcss-rails'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
