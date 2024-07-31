@@ -4,13 +4,21 @@
 
 <div id="posts">
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+    <div class="post my-4">
+      <% if post.images.present? %>
+        <% post.images.each do |image| %>
+          <%= image_tag(image.url, size: "242x116") %>
+        <% end %>
+      <% else %>
+        <p class="text-gray-700 font-inter text-sm leading-5 text-left">Nenhuma imagem encontrada.</p>
+      <% end %>
+      <%= render post %>
+      <p>
+        <%= link_to "Show this post", post %>
+      </p>
+    </div>
   <% end %>
 </div>
 
 <%= link_to "New post", new_post_path %>
-<!-- Logout Button -->
 <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-danger', data: { turbo: false } %>
