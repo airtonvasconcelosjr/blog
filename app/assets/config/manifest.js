@@ -1,5 +1,8 @@
 //= link_tree ../images
 //= link_directory ../stylesheets .css
-//= link_tree ../../javascript .js
-//= link_tree ../../../vendor/javascript .js
 //= link_tree ../builds
+//= link_tree ../../javascript .js
+//= link @rails--request.js.js
+//= link @stimulus-components--sortable.js
+//= link sortablejs.js
+//= link apexcharts.js
