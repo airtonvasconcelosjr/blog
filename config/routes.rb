@@ -13,5 +13,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :posts
+  scope module: :plataforms do
+    resources :posts
+  end
 end
