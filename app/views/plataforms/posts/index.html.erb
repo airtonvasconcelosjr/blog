@@ -1,0 +1,24 @@
+<h1>Posts</h1>
+
+<div id="posts" class="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-4">
+  <% @posts.each do |post| %>
+    <div class="post p-4 border rounded-lg shadow-sm bg-white">
+      <% if post.images.present? %>
+        <% post.images.each do |image| %>
+          <%= image_tag(image.url, size: "242x116", class: "mb-2") %>
+        <% end %>
+      <% else %>
+        <p class="text-gray-700 font-inter text-sm leading-5 text-left mb-2">Nenhuma imagem encontrada.</p>
+      <% end %>
+      <%= render post %>
+      <p class="mt-2">
+        <%= link_to "Show this post", post, class: 'text-blue-500 hover:underline' %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<div class="mt-4">
+  <%= link_to "New post", new_post_path, class: 'btn btn-primary' %>
+ 
+</div>

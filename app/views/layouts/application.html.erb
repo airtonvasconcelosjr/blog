@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html class="h-full bg-white">
   <head>
-    <title>MyApp</title>
+    <title>Stagee - Conecte, Mensure, Otimize</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+
+    <meta name="description" content="Stagee é uma para rastreamento de leads via WhatsApp, oferecendo uma gama de ferramentas para analisar campanhas, rastrear conversões e otimizar sua estratégia de marketing. Descubra integrações poderosas com CRM e um painel intuitivo.">
+
+    <meta property="og:title" content="Stagee - A Solução Definitiva para Rastreio de Leads">
+    <meta property="og:description" content="Stagee oferece ferramentas poderosas para rastreamento e gerenciamento de leads via WhatsApp. Analise suas campanhas, rastreie conversões e otimize sua estratégia de marketing com nosso painel abrangente e integração com CRM.">
+    <meta property="og:url" content="https://stagee.digital>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Stagee">
+  
+    <meta name="twitter:title" content="Stagee - A Solução Definitiva para Rastreio de Leads">
+    <meta name="twitter:description" content="Stagee oferece rastreamento avançado de leads via WhatsApp, com recursos como análise de campanhas, rastreamento de conversões e um painel intuitivo. Aprimore seus esforços de marketing com nossas ferramentas robustas de CRM.">
+    <meta name="twitter:url" content="https://stagee.digital">
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Stagee">
+    <meta name="keywords" content="rastreamento de leads, CRM WhatsApp, análise de marketing, rastreamento de conversões, painel de controle">
+
+    <%# <%= favicon_link_tag "favicon.png"  %>
 
   <body class="h-full">
     <main class="h-full">
-      <%= render 'layouts/flash' %>
       <%= yield %>
     </main>
   </body>
 </html>
-

@@ -1,0 +1,18 @@
+<nav class="flex flex-1 flex-col">
+  <ul role="list" class="flex flex-1 flex-col gap-y-7">
+    <li>
+      <ul role="list" class="-mx-2 space-y-1">
+      </ul>
+    </li>
+
+    <li class="-mx-6 mt-auto">
+      <div class="flex justify-between items-center px-6 py-3 text-sm font-semibold leading-6">
+        <div aria-hidden="true" class="text-white">
+          <%# <%= @current_user.name  %>
+        </div>
+
+        <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-danger', data: { turbo: false } %>
+      </div>
+    </li>
+  </ul>
+</nav>
