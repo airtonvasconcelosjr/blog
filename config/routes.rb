@@ -16,4 +16,10 @@ Rails.application.routes.draw do
   scope module: :plataforms do
     resources :posts
   end
+
+  match '/404', to: 'plataforms/errors#not_found', via: :all
+  match '/422', to: 'plataforms/errors#unprocessable_entity', via: :all
+  match '/500', to: 'plataforms/errors#internal_server_error', via: :all
+
+  match '*path', to: 'plataforms/errors#not_found', via: :all
 end
