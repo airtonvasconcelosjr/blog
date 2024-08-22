@@ -2,12 +2,19 @@
 
 module Plataforms
   class PlataformController < ApplicationController
+    include Authenticatable
     layout 'default'
 
     protected
 
     def after_sign_in_path_for(resource)
       stored_location_for(resource) || posts_path
+    end
+
+    before_action :configure_permitted_parameters, if: :devise_controller?
+
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit :sign_in, keys: %i[email password]
     end
 
     private
