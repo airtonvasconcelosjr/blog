@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html class="h-full bg-gray-50">
   <head>
-    <title>Meu Geestor</title>
+    <title>Meu blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%# <%= favicon_link_tag 'Logotipo--azul.png' %>
+    <%= favicon_link_tag 'Logotipo--azul.png' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "", "data-turbo-track": "reload" %>
@@ -15,9 +15,9 @@
     <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
       <div class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-indigo-600 pt-5 px-6 pb-4">
         <div class="flex h-16 shrink-0 items-center">
-          <%# <%= image_tag("Logotipo---horizontal-branco-png.png", size: "115x48")  %>
+          <%# <%= image_tag("Logotipo---horizontal-branco-png.png", size: "115x48") %>
         </div>
-        <%= render "layouts/nav"  %>
+        <%# <%= render "layouts/nav" %>
       </div>
     </div>
 
@@ -73,6 +73,6 @@
         <%= yield %>
       </div>
     </main>
-    <%# <%= render "shared/modals/delete"  %>
+    <%# <%= render "shared/modals/delete %>
   </body>
 </html>
