@@ -1,6 +1,6 @@
 <h1>Posts</h1>
 
-<div id="posts" class="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-4">
+<div id="posts" class="grid grid-cols-3 gap-4">
   <% @posts.each do |post| %>
     <div class="post p-4 border rounded-lg shadow-sm bg-white">
       <% if post.images.present? %>
@@ -20,5 +20,4 @@
 
 <div class="mt-4">
   <%= link_to "New post", new_post_path, class: 'btn btn-primary' %>
- 
 </div>
